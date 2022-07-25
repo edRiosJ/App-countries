@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar&display=swap');
+
+.contFooter
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--thirdy-color);
+}
+
+.contFooter__contBoxImg
+{
+    width: 15vw;
+    height: 10vh;
+    background-image: url(../images/logo2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.contFooter__contBoxSocial
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contFooter__contBoxSocial div
+{
+    width: 2.7vw;
+    height: 2.7vw;
+    margin: 0 2vw 0 2vw;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+.socialWhats
+{
+    background-image: url('../icons/whatsapp.png');
+}
+
+.socialLink
+{
+    background-image: url('../icons/linkedln.png');
+}
+
+.socialGit
+{
+    background-image: url('../icons/github.png');
+}
+
+.contFooter__contBoxCopy
+{
+    font-family: 'Akshar', sans-serif;
+    color: #fff;
+    margin-right: 1vw;
+}

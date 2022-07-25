@@ -1,0 +1,19 @@
+:root{
+    --main-color: #b20c1a;
+    --secondary-color: #cc8c13;
+    --thirdy-color: #19160b;
+    --color-background-article: rgba(176, 12, 26, 0.5);
+    --color-border-article: rgba(178, 12, 26, 1);
+    --color-top-card-article: #ff132a;
+    --color-bottom-card-article: #47050a;
+    --color-hover-select: #e29e1f;
+    --color-shadowBottom-welcomeBtn: #9b6a0e;
+    --color-shadowTop-welcomeBtn: #fdae18;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

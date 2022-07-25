@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar&display=swap');
+
+.contPrincipal
+{
+	display: flex;
+   	flex-direction: column;
+   	flex-wrap: nowrap;
+   	justify-content: space-evenly;
+   	height: 64vh;
+   	font-size: 1.5vw;
+   	font-weight: 900;
+   	color: var(--thirdy-color);
+   	font-family: 'Akshar', sans-serif;
+	align-items: center;
+}
+
+.contPrincipal__contSelector
+{
+	display: flex;
+	margin-top: 3vh;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 90%;
+   	height: 27vh;
+	border-radius: 30px;
+	background: var(--main-color);
+	box-shadow:  -5px 5px 10px var(--color-bottom-card-article), 5px -5px 10px var(--color-top-card-article);
+	padding: .3vh;
+}
+
+.contPrincipal__contSelector p
+{
+	font-size: 2.7vw;
+}
+
+.selector
+{
+	background: var(--secondary-color);
+	color: var(--thirdy-color);
+	width: 10.7vw;
+	padding: .8vh;
+	height: 5vh;
+	border: none;
+	font-size: 2.1vh;
+	font-style: italic;
+	font-weight: 600;
+	box-shadow: 0 1vh 5vh rgba(0,0,0,.5);
+	-webkit-appearance:none;
+	border-radius: 10px 10px 0 0;
+	outline: none;
+	transition: .5s;
+}
+
+.selector:hover
+{
+	background: var(--color-hover-select);
+}

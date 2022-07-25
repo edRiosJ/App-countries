@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.contPrincipal
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/background03.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Righteous', cursive;
+}
+
+.contPrincipal__contHeader
+{
+    grid-area: 1 / 1 / 2 / 6;
+}
+
+.contPrincipal__contBody
+{
+    grid-area: 2 / 1 / 6 / 6;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.contPrincipal__contHeader__contImg
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1vw;
+    margin-top: 1vh;
+}
+
+.contPrincipal__contBody__btnStart
+{
+    padding: .5em 1em;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-top: 7vh;
+    margin-right: 7vw;
+    border-radius: 52px;
+    background: var(--secondary-color);
+    box-shadow:  -5px 5px 21px var(--color-shadowBottom-welcomeBtn), 5px -5px 21px var(--color-shadowTop-welcomeBtn);
+    transition: .5s;
+}
+
+.contPrincipal__contBody__btnStart .link i
+{
+    content: url('../icons/welcome.png');
+}
+
+.contPrincipal__contBody__btnStart:hover
+{
+    border-radius: 52px;
+    background: var(--secondary-color);
+    box-shadow: inset 5px -5px 8px var(--color-shadowBottom-welcomeBtn), inset -5px 5px 8px var(--color-shadowTop-welcomeBtn);
+    letter-spacing: 2.5px;
+
+}
+
+.link
+{
+    text-decoration: none;
+    color: var(--thirdy-color);
+    font-family: 'Righteous', cursive;
+}
