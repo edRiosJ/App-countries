@@ -1,6 +1,5 @@
 const {Activities} = require('../db.js');
 
-//* Funcion terminada
 async function setActivityInDB(name, difficult, duration, season, country)
 {
     try

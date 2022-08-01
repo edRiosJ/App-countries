@@ -1,6 +1,10 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {setFilters, getAllCountries, getCountriesOrder} from '../redux/actions.js';
+import {getCountriesName} from '../redux/actions.js';
+import { FcSearch } from "react-icons/fc";
+import { IconContext  } from "react-icons";
+
 let style = require('../design/css/filterPanel.module.css');
 
 export default function FilterPanel()
@@ -9,6 +13,7 @@ export default function FilterPanel()
 
     let [typeFilter, setTypeFilter] = React.useState({typeCont: '', typeAct: '', typeOrd: ''});
     let [listAct, setListAct] = React.useState([]);
+    let [searchName, setSearchName] = React.useState('');
     const listCountries = useSelector(state => state.listCountries);
 
     React.useEffect(() =>
@@ -82,12 +87,25 @@ export default function FilterPanel()
         setTypeFilter((prev) => ({...prev, [e.target.name]: e.target.value}));
     }
 
+    function handleChangeSearch(e)
+    {
+        e.preventDefault();
+        dispatch(getCountriesName(e.target.value.trimStart()));
+        setSearchName(e.target.value.trimStart());
+    }
+
+    function handleSubmit(e)
+    {
+        e.preventDefault();
+        dispatch(getCountriesName(searchName));
+        setSearchName('');
+    }
+
     return (
         <React.Fragment>
             <div className={style.contPrincipal}>
                 <div className={style.contPrincipal__contSelector}>
-                    <p>Filters</p>
-                    <div>
+                    <div className={style.sel}>
                         <span>Continent: </span>
                         <select
                             className={style.selector}
@@ -104,7 +122,6 @@ export default function FilterPanel()
                             <option value="Oceania">Oceania</option>
                             <option value="Antarctic">Antarctic</option>
                         </select>
-                        <i className={style.myI}></i>
                     </div>
                     <div>
                         <span>Activity: </span>
@@ -129,9 +146,9 @@ export default function FilterPanel()
                     </div>
                 </div>
 
-                <div className={style.contPrincipal__contSelector}>
-                    <p>Order by:</p>
+                <div className={style.contPrincipal__contSelector2}>
                     <div>
+                    <span>Order by: </span>
                         <select
                             className={style.selector}
                             name="typeOrd"
@@ -148,8 +165,25 @@ export default function FilterPanel()
                                 <option value="descending">Descending</option>
                             </optgroup>
                         </select>
-                        <i></i>
                     </div>
+                </div>
+
+                <div className={style.contSearch}>
+                    <div className={`${style.form__group} ${style.field}`}>
+                        <input
+                            placeholder="Search country"
+                            className={style.form__field}
+                            type="input"
+                            name='searchName'
+                            autoComplete="off"
+                            value={searchName}
+                            onChange={(e) => handleChangeSearch(e)}
+                        />
+                        <label className={style.form__label}>Search country</label>
+                    </div>
+                <IconContext.Provider value={{size: "1.8vw" }}>
+                    <button className={style.contSearch_btn} onClick={(e) => handleSubmit(e)}><FcSearch/></button>
+                </IconContext.Provider>
                 </div>
             </div>
         </React.Fragment>

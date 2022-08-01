@@ -17,3 +17,56 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.app
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #edf1f4;
+}
+
+.header,
+.footer
+{
+    width: 100%;
+    height: 10vh;
+}
+
+.mainBody,
+.secondaryBody,
+.thirdBody
+{
+    width: 100%;
+    min-height: 90vh;
+}
+
+.mainBody
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.thirdBody
+{
+    border: solid 9px orange;
+}
+
+.footer
+{
+    order: 5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(transparent,var(--main-color));
+    border-radius: 6px;
+}

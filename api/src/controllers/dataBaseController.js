@@ -1,7 +1,6 @@
 const axios = require('axios');
 const {Countries} = require('../db.js')
 
-//* Funcion terminada
 async function getCountriesFromAPI()
 {
     try

@@ -1,30 +1,7 @@
 import React from 'react';
+import { IoLogoWhatsapp, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import { IconContext  } from "react-icons";
 let style = require('../design/css/footer.module.css')
-
-// export default function Footer()
-// {
-//     return (
-//         <React.Fragment>
-//             <div>
-//                 <div>
-//                     <img src={logo} alt="" />
-//                 </div>
-//             </div>
-//             <div>
-//                 <div>
-//                     <a href="#">Linkdin</a>
-//                     <a href="#">Twitter</a>
-//                     <a href="#">Whatsapp</a>
-//                 </div>
-//             </div>
-//             <div>
-//                 <div>
-//                     <p>Copyright</p>
-//                 </div>
-//             </div>
-//         </React.Fragment>
-//     )
-// }
 
 export default class Footer extends React.Component
 {
@@ -32,23 +9,19 @@ export default class Footer extends React.Component
     {
         return (
             <React.Fragment>
-                <div className={style.contFooter}>
-                    <div className={style.contFooter__contBoxImg}></div>
-                    <div className={style.contFooter__contBoxSocial}>
-                        <div className={style.socialWhats}>
-                            <a href="#"></a>
+                <IconContext.Provider value={{size: "2vw" }}>
+                    <div className={style.contFooter}>
+                        <div className={style.contFooter__contBoxImg}></div>
+                        <div className={style.contFooter__contBoxSocial}>
+                            <a href="https://api.whatsapp.com/send?phone=2211805708" target="_blank"><IoLogoWhatsapp style={{ color: "green"}}/></a>
+                            <a href="https://github.com/edRiosJ" target="_blank"><IoLogoGithub style={{ color: "gray"}}/></a>
+                            <a href="https://mx.linkedin.com" target="_blank"><IoLogoLinkedin style={{ color: "blue"}}/></a>
                         </div>
-                        <div className={style.socialLink}>
-                            <a href="#"></a>
-                        </div>
-                        <div className={style.socialGit}>
-                            <a href="#"></a>
+                        <div className={style.contFooter__contBoxCopy}>
+                            <p>Copyright &copy; 2022 Eduardo Rios</p>
                         </div>
                     </div>
-                    <div className={style.contFooter__contBoxCopy}>
-                        <p>Copyright &copy; 2022 Eduardo Rios</p>
-                    </div>
-                </div>
+                </IconContext.Provider>
             </React.Fragment>
         )
     }

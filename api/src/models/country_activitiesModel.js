@@ -2,7 +2,6 @@ const { DataTypes } = require('sequelize');
 const {countries} = require('./countriesModel');
 const {activities} = require('./activitiesModel');
 
-//* Modelo terminado
 module.exports = (sequelize) =>
 {
     sequelize.define('country_activities',

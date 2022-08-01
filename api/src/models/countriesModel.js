@@ -1,6 +1,5 @@
 const { DataTypes } = require('sequelize');
 
-//* Modelo terminado
 module.exports = (sequelize) =>
 {
   sequelize.define('countries',

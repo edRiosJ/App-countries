@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+.countryCard
+{
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: solid 2px violet;
+}
+
+.countryCard__mainInfo
+{
+    border: solid 2px black;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.countryCard__imgBox
+{
+    width: 50vw;
+    height: 60vh;
+    background: red;
+    border-radius: .3vw;
+    box-shadow: 0 1.05vw 3.5vw rgba(0,0,0,0.35);
+    overflow: hidden;
+    margin: 5vh;
+}
+
+.countryCard__imgBox img
+{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.countryCard__contInfo
+{
+    width: 30vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--thirdy-color);
+    margin: 5vh;
+    border-radius: .3vw;
+    background: linear-gradient(225deg, #d5d9dc, #feffff);
+    box-shadow:  -13px 13px 100px #7b7d7f, 13px -13px 100px #ffffff;
+}
+
+.countryCard__name
+{
+    font-size: 2.5vw;
+    letter-spacing: .7vw;
+    font-family: 'Courgette', cursive;
+    font-weight: 600;
+}
+
+.countryCard__capital
+{
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2vw;
+    letter-spacing: .4vw;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.countryCard__continent
+{
+    margin-top: 2vw;
+    font-family: 'Akshar', sans-serif;
+    font-size: 2vw;
+    letter-spacing: .3vw;
+}
+
+.countryCard__contInfoSec
+{
+    margin-top: 5vh;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.countryCard__infoSec_left
+{
+    width: 100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.countryCard__boxGif
+{
+    /* background-image: url(../icons/area.png);
+    background-size: cover;
+    background-position: center; */
+    width: 7vw;
+    height: 7vw;
+}
+
+.countryCard__infoArea
+{
+    font-family: 'Akshar', sans-serif;
+    font-size: 2vw;
+    font-weight: 600;
+    margin-left: 1vw;
+}
+
+.countryCard__infoSec_right
+{
+    width: 100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.countryCard__boxGif_2
+{
+    /* background-image: url(../icons/poblacion.png);
+    background-size: cover;
+    background-position: center; */
+    width: 7vw;
+    height: 7vw;
+}
+
+.countryCard__infoPopulation
+{
+    font-family: 'Akshar', sans-serif;
+    font-size: 2vw;
+    font-weight: 600;
+    margin-left: 1vw;
+}
+
+.cardsActivities
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.cardActivity
+{
+    width: 20vw;
+    height: 32vh;
+    margin-top: 8vh;
+    margin-bottom: 4vh;
+    border-radius: 1vw;
+    background: linear-gradient(225deg, #b87e11, #da9614);
+    box-shadow:  -.35vw .35vw .49vw #523808, .35vw -.35vw .49vw #ffe01e;
+}
+
+.cardActivity__name
+{
+    display: flex;
+    justify-content: center;
+    font-size: 2vw;
+    letter-spacing: 1vw;
+    font-family: 'Courgette', cursive;
+    font-weight: 600;
+    margin-top: 1vh;
+}
+
+.cardActivity__divDifficult,
+.cardActivity__divDuration,
+.cardActivity__divSeason
+{
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Akshar', sans-serif;
+    font-size: 1.5vw;
+    margin-top: 1vh;
+}
+
+.cardActivity__iconDifficult
+{
+    /* background-image: url(../icons/difficult.png);
+    background-size: cover;
+    background-position: center; */
+    width: 3vw;
+    height: 3vw;
+}
+
+.cardActivity__iconDuration
+{
+    /* background-image: url(../icons/duration.png);
+    background-size: cover;
+    background-position: center; */
+    width: 3vw;
+    height: 3vw;
+}
+
+.cardActivity__iconSeason
+{
+    /* background-image: url(../icons/temporada.png);
+    background-size: cover;
+    background-position: center; */
+    width: 3vw;
+    height: 3vw;
+}
+
+.loading
+{
+    /* background-image: url(../icons/loading.gif);
+    background-size: cover;
+    background-position: center; */
+    width: 10vw;
+    height: 10vw;
+    transform: translate(32vw,25vh);
+}
+
+.notActivity
+{
+    display: flex;
+    justify-content: center;
+    font-size: 2vw;
+    letter-spacing: 1vw;
+    font-family: 'Akshar', sans-serif;
+    font-weight: 600;
+    margin-top: 5vh;
+}

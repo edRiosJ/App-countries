@@ -13,7 +13,7 @@
 {
     width: 15vw;
     height: 10vh;
-    background-image: url(../images/logo2.png);
+    background-image: url(../images/logo.png);
     background-size: cover;
     background-position: center;
 }
@@ -26,29 +26,9 @@
     align-items: center;
 }
 
-.contFooter__contBoxSocial div
+.contFooter__contBoxSocial a
 {
-    width: 2.7vw;
-    height: 2.7vw;
-    margin: 0 2vw 0 2vw;
-    cursor: pointer;
-    background-size: cover;
-    background-position: center;
-}
-
-.socialWhats
-{
-    background-image: url('../icons/whatsapp.png');
-}
-
-.socialLink
-{
-    background-image: url('../icons/linkedln.png');
-}
-
-.socialGit
-{
-    background-image: url('../icons/github.png');
+    margin-left: 1vw;
 }
 
 .contFooter__contBoxCopy

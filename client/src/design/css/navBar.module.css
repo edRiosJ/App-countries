@@ -12,8 +12,8 @@
 .nav_contImg
 {
     width: 15vw;
-    height: 12vh;
-    background-image: url(../images/logo2.png);
+    height: 10vh;
+    background-image: url(../images/logo.png);
     background-size: cover;
     background-position: center;
 }
@@ -25,6 +25,8 @@
     justify-content: flex-end;
     align-items: center;
     margin-right: 1vw;
+    margin-top: 1vh;
+    height: 50%;
 }
 
 .nav_contBtn li
@@ -33,17 +35,18 @@
     padding-right: 0.5em;
     padding-left: 0.5em;
     font-family: 'Acme', sans-serif;
-    font-size: 2.5vw;
-    height: 80%;
-    padding-top: 3vh;
-    transition: 1s;
+    font-size: 2vw;
+    height: 7vh;
+    padding-top: 1vh;
+    transition: .7s;
+    margin-left: 1vw;
 }
 
 .nav_contBtn li:hover
 {
-    border-radius: 13px;
+    border-radius: .2vw;
     background: #1A4D2E;
-    box-shadow:  -5px 5px 7px #0a1f12, 5px -5px 7px #2a7b4a;
+    box-shadow:  -5px 5px 18px #0a1f12, 5px -5px 18px #2a7b4a;
 }
 
 .navLink
@@ -51,73 +54,4 @@
     font-family: 'Righteous', cursive;
     text-decoration: none;
     color: var(--main-color);
-}
-
-.contSearch
-{
-    margin-left: 2vw;
-    margin-right: 2vw;
-}
-
-.contSearch_input
-{
-    line-height: 28px;
-    border: 2px solid transparent;
-    border-bottom-color: var(--secondary-color);
-    padding: .2rem 0;
-    outline: none;
-    background-color: transparent;
-    color: #0d0c22;
-    transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    font-family: 'Righteous', cursive;
-    font-size: 1.8vw;
-}
-
-.contSearch_input:focus, .contSearch_input:hover
-{
-    outline: none;
-    padding: .2rem 1rem;
-    border-bottom-left-radius: 1rem;
-    border-top-left-radius: 1rem;
-    border-color: var(--secondary-color);
-    color: var(--secondary-color);
-}
-
-.contSearch_input::placeholder
-{
-    color: var(--main-color);
-}
-
-.contSearch_input:focus::placeholder
-{
-    opacity: 0;
-    transition: opacity .3s;
-}
-
-.contSearch_btn
-{
-    width: 5vw;
-    padding-bottom: 2vh;
-    height: 6.8vh;
-    font-family: 'Righteous', cursive;
-    font-size: 1.8vw;
-    border-width: 2px;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    color: var(--secondary-color);
-    border-color: var(--secondary-color);
-    background-color: var(--main-color);
-    transition: .5s;
-}
-
-.contSearch_btn i
-{
-    content: url('../icons/search.png');
-}
-
-.contSearch_btn:hover
-{
-    cursor: pointer;
-    background-color: var(--secondary-color);
-    box-shadow: 0px 15px 20px var(--main-color);
 }

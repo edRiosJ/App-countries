@@ -1,8 +1,6 @@
 const {Countries, Activities, Op} = require('../db.js');
 const axios = require('axios');
 
-//------------------------------------------------FUNCIONES DESDE LA DB------------------------------------
-//* Funcion terminada
 async function getAllCountriesFromDB()
 {
     try
@@ -26,7 +24,6 @@ async function getAllCountriesFromDB()
     }
 }
 
-//* Funcion terminada
 async function getCountryByIdDB(idCountry)
 {
     try
@@ -50,7 +47,6 @@ async function getCountryByIdDB(idCountry)
     }
 }
 
-//* Funcion terminada
 async function getCountryByNameDB(nameCountry)
 {
     try
@@ -116,72 +112,6 @@ function sortByName(x, y)
     return x.name.localeCompare(y.name, 'fr', {ignorePunctuation: true});
 }
 
-
-
-// ---------------------------------------- FUNCIONES DESDE LA API ----------------------------------------
-
-//* Funcion terminada
-async function getCountryByNameAPI(nameCountry)
-{
-    try
-    {
-        const arrayCountries = (await axios(`https://restcountries.com/v3/name/${nameCountry}`)).data.map(el =>
-        {
-            if(el.capital && el.cca3 && el.name.common && el.flags[0] && el.region)
-            {
-                return {
-                    id: el.cca3,
-                    name: el.name.common,
-                    imageFlag: el.flags[0],
-                    continent: el.region
-                }
-            }
-        });
-
-        let countriesFilter = arrayCountries.filter(country => country !== undefined && country.name.includes(nameCountry));
-
-        if(countriesFilter.length === 0) throw new Error("I didn't find this country");
-        return countriesFilter;
-    }
-    catch(error)
-    {
-        throw new Error("I didn't find this country");
-    }
-}
-
-//! Agregar consulta para actividades turisticas
-// async function getCountryByIdAPI(idCountry)
-// {
-//     try
-//     {
-//         const country = (await axios(`https://restcountries.com/v3/alpha/${idCountry}`)).data.map(el =>
-//         {
-//             if(el.capital && el.cca3 && el.name.common && el.flags[0] && el.region)
-//             {
-//                 return {
-//                     id: el.cca3,
-//                     name: el.name.common,
-//                     imageFlag: el.flags[0],
-//                     continent: el.region,
-//                     capital: el.capital[0],
-//                     subregion: el.subregion,
-//                     area: el.area,
-//                     population: el.population
-//                 }
-//             }
-//             throw new Error("I didn't find this country");
-//         });
-//         return country;
-//     }
-//     catch(error)
-//     {
-//         throw new Error("I didn't find this country");
-//     }
-// }
-
-//-------------------------------------------- FUNCIONES PARA HACER PRUEBAS--------------------------------
-
-//* Funcion terminada
 async function setCountryInDB(id, name, imageFlag, continent, capital, subregion, area, population)
 {
     try
@@ -200,9 +130,7 @@ module.exports =
 {
     getAllCountriesFromDB,
     getCountryByIdDB,
-    // getCountryByIdAPI,
     getCountryByNameDB,
-    getCountryByNameAPI,
     setCountryInDB,
     getCountriesOrder
 };

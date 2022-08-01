@@ -1,31 +1,53 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
-import WelcomePage from './components/WelcomePage.jsx';
-import PagePrincipal from './components/PagePrincipal';
-import PageDetail from './components/PageDetail';
-import PageForm from './components/PageForm'
-import PageNotFound from './components/PageNotFound';
+import NavBar from './components/NavBar.jsx';
+import Footer from './components/Footer.jsx';
+import FilterPanel from './components/FilterPanel.jsx';
+import MediaPanel from './components/MediaPanel.jsx';
+import CountriesPanel from './components/CountriesPanel.jsx';
+import DetailPanel from './components/DetailPanel.jsx';
 let style = require('./design/css/app.module.css');
 
 function App()
 {
   return (
     <React.Fragment>
-      <div className={style.app}>
       <Switch>
+        <div className={style.app}>
 
-        <Route exact path = {'/home'} component={WelcomePage}/>
+          <Route path = {'/'}>
+            <div className={style.header}>
+              <NavBar/>
+            </div>
 
-        <Route exact path = {'/yourCountry/pages'} component={PagePrincipal}/>
+            <div className={style.footer}>
+              <Footer/>
+            </div>
+          </Route>
 
-        <Route exact path = {'/yourCountry/detailCountry/:idCountry'} component={PageDetail}/>
+          <Route exact path = {'/'}>
+            <div className={style.mainBody}>
+              <MediaPanel/>
+              <FilterPanel/>
+              <CountriesPanel/>
+            </div>
+          </Route>
 
-        <Route exact path = {'/yourCountry/newActivity'} component={PageForm}/>
+          <Route exact path = {'/detailCountry/:idCountry'}>
+            <div className={style.secondaryBody}>
+              <DetailPanel/>
+            </div>
+          </Route>
 
-        <Route path={'*'} component={PageNotFound}/>
+          <Route exact path = {'/newActivity'} >
+            <div className={style.thirdBody}>
+
+            </div>
+          </Route>
+
+          <Route path={'*'} className={style.errorBody}/>
+        </div>
       </Switch>
-
-      </div>
     </React.Fragment>
   );
 }
