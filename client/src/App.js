@@ -6,6 +6,7 @@ import FilterPanel from './components/FilterPanel.jsx';
 import MediaPanel from './components/MediaPanel.jsx';
 import CountriesPanel from './components/CountriesPanel.jsx';
 import DetailPanel from './components/DetailPanel.jsx';
+import FormPanel from './components/FormPanel.jsx';
 let style = require('./design/css/app.module.css');
 
 function App()
@@ -41,7 +42,7 @@ function App()
 
           <Route exact path = {'/newActivity'} >
             <div className={style.thirdBody}>
-
+              <FormPanel/>
             </div>
           </Route>
 

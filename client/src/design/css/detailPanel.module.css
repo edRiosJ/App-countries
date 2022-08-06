@@ -12,12 +12,10 @@
     align-content: center;
     flex-direction: column;
     justify-content: flex-start;
-    border: solid 2px violet;
 }
 
 .countryCard__mainInfo
 {
-    border: solid 2px black;
     width: 100%;
     min-height: 70vh;
     display: flex;
@@ -55,13 +53,13 @@
     margin: 5vh;
     border-radius: .3vw;
     background: linear-gradient(225deg, #d5d9dc, #feffff);
-    box-shadow:  -13px 13px 100px #7b7d7f, 13px -13px 100px #ffffff;
+    box-shadow:  -13px 13px 40px #7b7d7f, 13px -13px 40px #ffffff;
 }
 
 .countryCard__name
 {
     font-size: 2.5vw;
-    letter-spacing: .7vw;
+    letter-spacing: .5vw;
     font-family: 'Courgette', cursive;
     font-weight: 600;
 }
@@ -83,63 +81,25 @@
     letter-spacing: .3vw;
 }
 
-.countryCard__contInfoSec
-{
-    margin-top: 5vh;
-    width: 100%;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.countryCard__infoSec_left
-{
-    width: 100%;
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.countryCard__boxGif
-{
-    /* background-image: url(../icons/area.png);
-    background-size: cover;
-    background-position: center; */
-    width: 7vw;
-    height: 7vw;
-}
-
 .countryCard__infoArea
 {
     font-family: 'Akshar', sans-serif;
     font-size: 2vw;
-    font-weight: 600;
     margin-left: 1vw;
-}
-
-.countryCard__infoSec_right
-{
-    width: 100%;
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.countryCard__boxGif_2
-{
-    /* background-image: url(../icons/poblacion.png);
-    background-size: cover;
-    background-position: center; */
-    width: 7vw;
-    height: 7vw;
+    letter-spacing: .2vw;
 }
 
 .countryCard__infoPopulation
 {
     font-family: 'Akshar', sans-serif;
     font-size: 2vw;
-    font-weight: 600;
     margin-left: 1vw;
+    letter-spacing: .2vw;
+}
+
+.iconBox
+{
+    margin-right: 1vw;
 }
 
 .cardsActivities
@@ -149,17 +109,18 @@
     justify-content: space-around;
     align-items: flex-start;
     align-content: center;
+    margin-bottom: 5vh;
 }
 
 .cardActivity
 {
     width: 20vw;
-    height: 32vh;
+    height: 40vh;
     margin-top: 8vh;
     margin-bottom: 4vh;
-    border-radius: 1vw;
-    background: linear-gradient(225deg, #b87e11, #da9614);
-    box-shadow:  -.35vw .35vw .49vw #523808, .35vw -.35vw .49vw #ffe01e;
+    border-radius: .3vw;
+    background: linear-gradient(225deg, #d5d9dc, #feffff);
+    box-shadow:  -13px 13px 80px #7b7d7f, 13px -13px 80px #ffffff;
 }
 
 .cardActivity__name
@@ -170,7 +131,8 @@
     letter-spacing: 1vw;
     font-family: 'Courgette', cursive;
     font-weight: 600;
-    margin-top: 1vh;
+    margin-top: 2vh;
+    margin-bottom: 3.5vh;
 }
 
 .cardActivity__divDifficult,
@@ -183,41 +145,11 @@
     align-items: center;
     font-family: 'Akshar', sans-serif;
     font-size: 1.5vw;
-    margin-top: 1vh;
-}
-
-.cardActivity__iconDifficult
-{
-    /* background-image: url(../icons/difficult.png);
-    background-size: cover;
-    background-position: center; */
-    width: 3vw;
-    height: 3vw;
-}
-
-.cardActivity__iconDuration
-{
-    /* background-image: url(../icons/duration.png);
-    background-size: cover;
-    background-position: center; */
-    width: 3vw;
-    height: 3vw;
-}
-
-.cardActivity__iconSeason
-{
-    /* background-image: url(../icons/temporada.png);
-    background-size: cover;
-    background-position: center; */
-    width: 3vw;
-    height: 3vw;
+    margin-top: 2vh;
 }
 
 .loading
 {
-    /* background-image: url(../icons/loading.gif);
-    background-size: cover;
-    background-position: center; */
     width: 10vw;
     height: 10vw;
     transform: translate(32vw,25vh);
