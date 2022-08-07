@@ -1,0 +1,133 @@
+.containerGames
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 99vw;
+    min-height: 90vh;
+}
+
+.containerOptionsGmae
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 99vw;
+    height: 20vh;
+    margin-top: 2vh;
+    overflow-y: hidden;
+}
+
+.buttonGames
+{
+    width: 14vw;
+    padding-top: .5vh;
+    padding-bottom: .5vh;
+	font-family: 'Akshar', sans-serif;
+    color: var(--main-color);
+    font-size: 1.3vw;
+    border-radius: .3vw;
+    border: solid .1vw var(--first-color);
+    box-shadow:  -13px 13px 50px #7b7d7f, 13px -13px 50px #ffffff;
+    letter-spacing: .1vw;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.buttonGames:hover
+{
+    background: var(--first-color);
+    transform: scale(1.1);
+}
+
+.iconConf
+{
+    transition: .5s;
+}
+
+.buttonGames:hover .iconConf
+{
+    transform: translateY(3vh) scale(5);
+}
+
+.buttonGames:hover p
+{
+    transform: translateY(2vw);
+}
+
+.containerScoreTables
+{
+    width: 99vw;
+    min-height: 68vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tableScore
+{
+    width: 25vw;
+    min-height: 68vh;
+}
+
+.tableScore p
+{
+    border-radius: .3vw;
+    margin-bottom: 4vh;
+    font-size: 1.5vw;
+    background-color: var(--first-color);
+    /* color: var(--secondary-color); */
+    color: orangeRed;
+    padding: 2vh 2vw;
+    letter-spacing: 0.2vw;
+	font-family: 'Akshar', sans-serif;
+    font-weight: 900;
+    box-shadow:  -13px 13px 40px #7b7d7f, 13px -13px 40px #ffffff;
+    cursor: default;
+}
+
+.table li
+{
+    border-radius: 3px;
+    padding: 2vh 1vw;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4vh;
+}
+
+.tableHeader
+{
+    background-color: orangered;
+    font-size: 1.4vw;
+    text-transform: uppercase;
+    letter-spacing: 0.2vw;
+    font-weight: 900;
+    color: var(--first-color);
+	font-family: 'Akshar', sans-serif;
+    cursor: default;
+    box-shadow:  -13px 13px 40px #7b7d7f, 13px -13px 30px #ffffff;
+}
+
+.tableRow
+{
+    background: linear-gradient(225deg, #d5d9dc, #feffff);
+    box-shadow:  -13px 13px 30px #7b7d7f, 13px -13px 30px #ffffff;
+    cursor: default;
+}
+
+.col1
+{
+    flex-basis: 5%;
+}
+
+.col2
+{
+    flex-basis: 40%;
+}
+
+.col3
+{
+    flex-basis: 30%;
+}

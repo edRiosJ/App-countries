@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar&display=swap');
+
 :root{
+    --first-color: #1A4D2E;
     --main-color: #b20c1a;
     --secondary-color: #cc8c13;
     --thirdy-color: #19160b;
@@ -36,7 +39,8 @@
 
 .mainBody,
 .secondaryBody,
-.thirdBody
+.thirdBody,
+.gamesBody
 {
     width: 100%;
     min-height: 90vh;
@@ -47,6 +51,14 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
+}
+
+.gamesBody
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
