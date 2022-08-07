@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import { FcHome, FcNightLandscape } from "react-icons/fc";
+import { FcHome, FcNightLandscape, FcStart } from "react-icons/fc";
 let style = require('../design/css/navBar.module.css');
 
 export default function NavBar()
@@ -15,6 +15,10 @@ export default function NavBar()
                     </li>
                     <li>
                         <NavLink exact to={'/newActivity'} className={style.navLink} activeStyle={{color: "#cc8c13"}}><FcNightLandscape/>New activity</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink exact to={'/games'} className={style.navLink} activeStyle={{color: "#cc8c13"}}><FcStart/>Games</NavLink>
                     </li>
                 </ul>
             </nav>

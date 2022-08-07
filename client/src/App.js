@@ -7,6 +7,7 @@ import MediaPanel from './components/MediaPanel.jsx';
 import CountriesPanel from './components/CountriesPanel.jsx';
 import DetailPanel from './components/DetailPanel.jsx';
 import FormPanel from './components/FormPanel.jsx';
+import GamePanel from './components/GamePanel.jsx';
 let style = require('./design/css/app.module.css');
 
 function App()
@@ -37,6 +38,12 @@ function App()
           <Route exact path = {'/detailCountry/:idCountry'}>
             <div className={style.secondaryBody}>
               <DetailPanel/>
+            </div>
+          </Route>
+
+          <Route exact path = {'/games'}>
+            <div className={style.gamesBody}>
+              <GamePanel/>
             </div>
           </Route>
 
