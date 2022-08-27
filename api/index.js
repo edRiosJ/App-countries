@@ -21,12 +21,13 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const {getCountriesFromAPI} = require('./src/controllers/dataBaseController');
 
-// Syncing all the models at once.
+const PORT = process.env.PORT || 3000;
+
 conn.sync({ force: true }).then(() =>
 {
-  server.listen(3001, async () =>
+  server.listen(PORT, async () =>
   {
-    console.log('%s listening at 3001'); // eslint-disable-line no-console
+    console.log(`server listening at ${PORT}`);
     await getCountriesFromAPI();
   });
 });
