@@ -21,7 +21,7 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const {getCountriesFromAPI} = require('./src/controllers/dataBaseController');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.APP_PORT || 3001;
 
 conn.sync({ force: true }).then(() =>
 {
