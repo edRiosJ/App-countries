@@ -4,8 +4,10 @@ import {setFilters, getAllCountries, getCountriesOrder} from '../redux/actions.j
 import {getCountriesName} from '../redux/actions.js';
 import { FcSearch } from "react-icons/fc";
 import { IconContext  } from "react-icons";
-
 let style = require('../design/css/filterPanel.module.css');
+require('dotenv').config();
+
+const URL = process.env.APP_URL === 'production' ? 'https://app--countries.herokuapp.com' : 'http://localhost:3001';
 
 export default function FilterPanel()
 {
@@ -18,7 +20,7 @@ export default function FilterPanel()
 
     React.useEffect(() =>
     {
-        fetch('http://localhost:3001/activities')
+        fetch(`${URL}/activities`)
         .then(res => res.json())
         .then(data => setListAct(data))
         .catch(error => setListAct(error));
