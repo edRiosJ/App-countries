@@ -4,6 +4,9 @@ import { MdDeleteForever } from "react-icons/md";
 import { IconContext  } from "react-icons";
 import Swal from 'sweetalert2';
 let style = require('../design/css/formPanel.module.css');
+require('dotenv').config();
+
+const URL = process.env.APP_URL === 'production' ? 'https://app--countries.herokuapp.com' : 'http://localhost:3001';
 
 export default function FormPanel()
 {
@@ -22,7 +25,7 @@ export default function FormPanel()
 
     React.useEffect(() =>
     {
-        fetch('http://localhost:3001/countries/')
+        fetch(`${URL}/countries/`)
         .then(resp => resp.json())
         .then(data =>
             {
@@ -56,7 +59,7 @@ export default function FormPanel()
         e.preventDefault();
         if(Object.keys(errors).length === 0)
         {
-            fetch('http://localhost:3001/activities', {
+            fetch(`${URL}/activities`, {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json;charset=utf-8'},
                     body: JSON.stringify(

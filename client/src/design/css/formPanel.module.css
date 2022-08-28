@@ -22,7 +22,7 @@
 
 .panelLeftForm__boxImg
 {
-    background-image: url('../images/sky.jpg');
+    background-image: url('https://res.cloudinary.com/edrj/image/upload/v1661664741/app-countries/sky_d6ogsp.jpg');
     background-size: cover;
     background-position: center;
     width: 25vw;
@@ -45,7 +45,7 @@
 {
     height: 8vw;
     width: 8vw;
-    background: url("../images/logoForm.png");
+    background: url("https://res.cloudinary.com/edrj/image/upload/v1661664792/app-countries/logoForm_dq55l9.png");
     background-size: cover;
     background-position: center;
     border-radius: 50%;

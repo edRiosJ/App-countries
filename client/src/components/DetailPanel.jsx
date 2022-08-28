@@ -4,6 +4,9 @@ import { FcLandscape, FcConferenceCall, FcGlobe } from "react-icons/fc";
 import { BsSpeedometer, BsClock, BsFillCalendarMonthFill } from "react-icons/bs";
 import { IconContext  } from "react-icons";
 let style = require('../design/css/detailPanel.module.css');
+require('dotenv').config();
+
+const URL = process.env.APP_URL === 'production' ? 'https://app--countries.herokuapp.com' : 'http://localhost:3001';
 
 export default function CountryCard()
 {
@@ -24,7 +27,7 @@ export default function CountryCard()
 
     React.useEffect(() =>
     {
-        fetch(`http://localhost:3001/countries/${idCountry}`)
+        fetch(`${URL}/countries/${idCountry}`)
         .then(res => res.json())
         .then(data =>
             {
