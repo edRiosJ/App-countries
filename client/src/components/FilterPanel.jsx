@@ -7,7 +7,7 @@ import { IconContext  } from "react-icons";
 let style = require('../design/css/filterPanel.module.css');
 require('dotenv').config();
 
-const URL = process.env.APP_URL === 'production' ? 'https://app--countries.herokuapp.com' : 'http://localhost:3001';
+const URL = process.env.REACT_APP_URL === 'production' ? 'https://app--countries.herokuapp.com' : 'http://localhost:3001';
 
 export default function FilterPanel()
 {

@@ -4,7 +4,7 @@ export const SET_FILTERS = 'SET_FILTERS';
 export const GET_COUNTRIES_ORDER = 'GET_COUNTRIES_ORDER';
 require('dotenv').config();
 
-const URL = process.env.APP_URL === 'production' ? 'https://app--countries.herokuapp.com' : 'http://localhost:3001';
+const URL = process.env.REACT_APP_URL === 'production' ? 'https://app--countries.herokuapp.com' : 'http://localhost:3001';
 
 export function getAllCountries()
 {
