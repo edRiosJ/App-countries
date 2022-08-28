@@ -6,7 +6,7 @@ import { IconContext  } from "react-icons";
 let style = require('../design/css/detailPanel.module.css');
 require('dotenv').config();
 
-const URL = process.env.APP_URL === 'production' ? 'https://app--countries.herokuapp.com' : 'http://localhost:3001';
+const URL = process.env.REACT_APP_URL === 'production' ? 'https://app--countries.herokuapp.com' : 'http://localhost:3001';
 
 export default function CountryCard()
 {
