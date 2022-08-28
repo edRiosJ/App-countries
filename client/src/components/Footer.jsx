@@ -15,7 +15,7 @@ export default class Footer extends React.Component
                         <div className={style.contFooter__contBoxSocial}>
                             <a href="https://api.whatsapp.com/send?phone=2211805708" target="_blank"><IoLogoWhatsapp style={{ color: "green"}}/></a>
                             <a href="https://github.com/edRiosJ" target="_blank"><IoLogoGithub style={{ color: "gray"}}/></a>
-                            <a href="https://mx.linkedin.com" target="_blank"><IoLogoLinkedin style={{ color: "blue"}}/></a>
+                            <a href="https://www.linkedin.com/in/eduardo-rios-jaen/" target="_blank"><IoLogoLinkedin style={{ color: "blue"}}/></a>
                         </div>
                         <div className={style.contFooter__contBoxCopy}>
                             <p>Copyright &copy; 2022 Eduardo Rios</p>
