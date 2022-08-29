@@ -1,0 +1,18 @@
+.containerTypeGame
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 99vw;
+    min-height: 90vh;
+}
+
+.TypeGameImg
+{
+    width: 60vw;
+    min-height: 70vh;
+    background-image: url('https://res.cloudinary.com/edrj/image/upload/v1661747821/app-countries/working_y0jsyj.png');
+    background-size: cover;
+    background-position: center;
+}
