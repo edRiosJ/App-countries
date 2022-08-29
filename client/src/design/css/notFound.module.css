@@ -1,0 +1,18 @@
+.containerNotFound
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 99vw;
+    min-height: 90vh;
+}
+
+.NotFoundImg
+{
+    width: 60vw;
+    min-height: 70vh;
+    background-image: url('https://res.cloudinary.com/edrj/image/upload/v1661748187/app-countries/notFound_ss3uoa.png');
+    background-size: cover;
+    background-position: center;
+}
