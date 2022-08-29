@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {getAllCountries} from '../redux/actions.js';
 import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
 import { IconContext  } from "react-icons";
+import NotFound from './NotFound';
 let style = require('../design/css/countriesPanel.module.css');
 
 export default function Pagination()
@@ -126,7 +127,7 @@ export default function Pagination()
             {controlPagination}
             <div className={style.contCards}>
                 {
-                    filters.hasOwnProperty('error')? <div><p>{filters.error}</p></div>:
+                    filters.hasOwnProperty('error')? <div><NotFound/></div>:
                     currentCards&&currentCards.map(e =>
                     {
                         return (

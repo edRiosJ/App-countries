@@ -8,6 +8,8 @@ import CountriesPanel from './components/CountriesPanel.jsx';
 import DetailPanel from './components/DetailPanel.jsx';
 import FormPanel from './components/FormPanel.jsx';
 import GamePanel from './components/GamePanel.jsx';
+import TypeGame from './components/TypeGame.jsx';
+// import NotFound from './components/NotFound.jsx';
 let style = require('./design/css/app.module.css');
 
 function App()
@@ -42,18 +44,28 @@ function App()
           </Route>
 
           <Route exact path = {'/games'}>
-            <div className={style.gamesBody}>
+            <div className={style.secondaryBody}>
               <GamePanel/>
             </div>
           </Route>
 
+          <Route exact path = {'/games/:idGame'}>
+            <div className={style.secondaryBody}>
+              <TypeGame/>
+            </div>
+          </Route>
+
           <Route exact path = {'/newActivity'} >
-            <div className={style.thirdBody}>
+            <div className={style.secondaryBody}>
               <FormPanel/>
             </div>
           </Route>
 
-          <Route path={'*'} className={style.errorBody}/>
+          {/* <Route path = {'*'}>
+            <div className={style.secondaryBody}>
+              <NotFound/>
+            </div>
+          </Route> */}
         </div>
       </Switch>
     </React.Fragment>
