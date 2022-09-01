@@ -128,6 +128,7 @@ export default function Pagination()
             <div className={style.contCards}>
                 {
                     filters.hasOwnProperty('error')? <div><NotFound/></div>:
+                    filters.length < 1 ? <div className={style.charging}/>:
                     currentCards&&currentCards.map(e =>
                     {
                         return (

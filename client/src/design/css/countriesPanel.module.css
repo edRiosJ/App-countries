@@ -124,3 +124,12 @@ li.active
     font-family: 'Akshar', sans-serif;
     color: var(--thirdy-color);
 }
+
+.charging
+{
+    width: 37vw;
+    min-height: 70vh;
+    background-image: url('https://res.cloudinary.com/edrj/image/upload/v1662013591/app-countries/loading2_e7w6ea.gif');
+    background-size:contain;
+    background-position: center;
+}
