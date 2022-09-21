@@ -131,7 +131,11 @@ export default function Pagination()
             <div className={style.contCards}>
                 {
                     filters.hasOwnProperty('error')? <div><NotFound/></div>:
-                    filters.length < 1 ? <div className={style.charging}/>:
+                    filters.length < 1 ?
+                        <div className={style.loader}>
+                            <span><i></i></span>
+                        </div>
+                    :
                     currentCards&&currentCards.map(e =>
                     {
                         return (
