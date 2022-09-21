@@ -22,11 +22,13 @@ export default function Pagination()
     let indexOfFirstCard;
     let currentCards;
 
-    if(filters.hasOwnProperty('error') === false){
-    indexOfLastCard = currentPage === 1 ? currentPage * (cardsPerPage - 1) : currentPage * cardsPerPage;
-    indexOfFirstCard = currentPage === 1 ? indexOfLastCard - (cardsPerPage - 1) : indexOfLastCard - cardsPerPage;
-    currentCards = currentPage === 1 ? filters.slice(indexOfFirstCard, indexOfLastCard) : filters.slice(indexOfFirstCard-1, indexOfLastCard-1);
+    if(filters.hasOwnProperty('error') === false)
+    {
+        indexOfLastCard = currentPage === 1 ? currentPage * (cardsPerPage - 1) : currentPage * cardsPerPage;
+        indexOfFirstCard = currentPage === 1 ? indexOfLastCard - (cardsPerPage - 1) : indexOfLastCard - cardsPerPage;
+        currentCards = currentPage === 1 ? filters.slice(indexOfFirstCard, indexOfLastCard) : filters.slice(indexOfFirstCard-1, indexOfLastCard-1);
     }
+
     let pages = [];
     let pageIncrementBtn = null;
     let pageDecrementBtn = null;
@@ -35,9 +37,10 @@ export default function Pagination()
     {
             if (filters.length === 0)
             {
-                dispatch(getAllCountries())
+                dispatch(getAllCountries());
             }
-    },[dispatch, filters]);
+            setCurrentPage(1);
+    },[filters]);
 
     for (let i = 1; i <= Math.ceil(filters.length / cardsPerPage); i++)
     {
@@ -128,7 +131,11 @@ export default function Pagination()
             <div className={style.contCards}>
                 {
                     filters.hasOwnProperty('error')? <div><NotFound/></div>:
-                    filters.length < 1 ? <div className={style.charging}/>:
+                    filters.length < 1 ?
+                        <div className={style.loader}>
+                            <span><i></i></span>
+                        </div>
+                    :
                     currentCards&&currentCards.map(e =>
                     {
                         return (
