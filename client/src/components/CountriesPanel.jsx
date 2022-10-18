@@ -45,7 +45,6 @@ export default function Pagination()
     for (let i = 1; i <= Math.ceil(filters.length / cardsPerPage); i++)
     {
         pages.push(i);
-        if(i === 1) console.log(filters.length);
     }
 
     if (pages.length > maxPageNumberLimit)  pageIncrementBtn = <li onClick={handleNextBtn}> &hellip; </li>;
