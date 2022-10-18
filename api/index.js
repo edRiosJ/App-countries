@@ -23,11 +23,11 @@ const {getCountriesFromAPI} = require('./src/controllers/dataBaseController');
 
 const PORT = process.env.PORT || 3001;
 
-conn.sync({ force: true }).then(() =>
+conn.sync({ force: false }).then(() =>
 {
   server.listen(PORT, async () =>
   {
     console.log(`server listening at ${PORT}`);
-    await getCountriesFromAPI();
+    // await getCountriesFromAPI();
   });
 });
